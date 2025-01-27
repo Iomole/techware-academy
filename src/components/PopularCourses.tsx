@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card";
+import { useNavigate } from "react-router-dom";
 
 const courses = [
   {
@@ -24,6 +25,12 @@ const courses = [
 ];
 
 const PopularCourses = () => {
+  const navigate = useNavigate();
+
+  const handleViewAllCourses = () => {
+    navigate('/courses');
+  };
+
   return (
     <div className="bg-white py-16">
       <div className="container mx-auto px-4">
@@ -55,7 +62,7 @@ const PopularCourses = () => {
                 </div>
               </CardContent>
               <CardFooter>
-                <Button className="w-full">
+                <Button className="w-full" onClick={() => navigate(`/courses/${course.title.toLowerCase().replace(/\s+/g, '-')}`)}>
                   Learn More <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </CardFooter>
@@ -63,7 +70,7 @@ const PopularCourses = () => {
           ))}
         </div>
         <div className="text-center mt-12">
-          <Button size="lg" variant="outline">
+          <Button size="lg" variant="outline" onClick={handleViewAllCourses}>
             View All Courses <ArrowRight className="ml-2" />
           </Button>
         </div>
