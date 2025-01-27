@@ -20,8 +20,11 @@ const Navigation = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-techware-red">Techware</span>
-              <span className="text-2xl font-bold text-techware-dark">Academy</span>
+              <img 
+                src="/lovable-uploads/203251ff-06f5-4dc3-8ec5-261985af91e0.png" 
+                alt="Techware Academy Logo" 
+                className="h-10 w-auto"
+              />
             </Link>
           </div>
 
