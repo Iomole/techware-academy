@@ -22,9 +22,9 @@ const Navigation = () => {
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
               <img 
-                src="/lovable-uploads/203251ff-06f5-4dc3-8ec5-261985af91e0.png" 
+                src="/lovable-uploads/a641b89d-f1a9-4054-b7b3-4c1b9a56ae9c.png" 
                 alt="Techware Academy Logo" 
-                className="h-12 w-auto" // Changed from h-10 to h-12
+                className="h-12 w-auto"
               />
             </Link>
           </div>
