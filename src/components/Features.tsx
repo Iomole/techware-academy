@@ -27,7 +27,7 @@ const Features = () => {
   return (
     <div className="bg-techware-gray py-16">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-3xl font-bold text-techware-dark mb-4">
             The Techware Advantage
           </h2>
@@ -39,9 +39,10 @@ const Features = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in"
+              style={{ animationDelay: `${index * 150}ms` }}
             >
-              <div className="text-primary mb-4">{feature.icon}</div>
+              <div className="text-primary mb-4 animate-bounce">{feature.icon}</div>
               <h3 className="text-xl font-semibold text-techware-dark mb-2">
                 {feature.title}
               </h3>
