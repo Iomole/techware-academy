@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -64,16 +64,28 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-primary transition-colors">
+              <a 
+                href="https://www.facebook.com/share/1WcveRgB3z/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-300 hover:text-primary transition-colors"
+              >
                 <Facebook size={24} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-primary transition-colors">
-                <Twitter size={24} />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-primary transition-colors">
+              <a 
+                href="https://www.instagram.com/techware_academy.ng?igsh=dmcyMjkwNG1jeHY2" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-300 hover:text-primary transition-colors"
+              >
                 <Instagram size={24} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-primary transition-colors">
+              <a 
+                href="https://www.linkedin.com/posts/techwareacademy_learning-careergrowth-techwareacademy-activity-7289567526374506497-4Fjo?utm_source=share&utm_medium=member_android" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-300 hover:text-primary transition-colors"
+              >
                 <Linkedin size={24} />
               </a>
             </div>
