@@ -24,7 +24,7 @@ const Navigation = () => {
               <img 
                 src="/lovable-uploads/203251ff-06f5-4dc3-8ec5-261985af91e0.png" 
                 alt="Techware Academy Logo" 
-                className="h-10 w-auto"
+                className="h-12 w-auto" // Changed from h-10 to h-12
               />
             </Link>
           </div>
