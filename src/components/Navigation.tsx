@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -20,7 +21,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center">
+            <Link to="/" className="flex-shrink-0 flex items-center" replace>
               <img 
                 src="/lovable-uploads/a641b89d-f1a9-4054-b7b3-4c1b9a56ae9c.png" 
                 alt="Techware Academy Logo" 
@@ -35,12 +36,15 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-secondary hover:text-primary transition-colors duration-200"
+                replace
+                className={`text-secondary hover:text-primary transition-colors duration-200 ${
+                  location.pathname === item.path ? "text-primary" : ""
+                }`}
               >
                 {item.name}
               </Link>
             ))}
-            <Link to="/enroll">
+            <Link to="/enroll" replace>
               <Button className="bg-primary hover:bg-primary-hover text-white">
                 Enroll Now
               </Button>
@@ -66,14 +70,17 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="block px-3 py-2 text-base font-medium text-secondary hover:text-primary transition-colors duration-200"
+                  replace
+                  className={`block px-3 py-2 text-base font-medium text-secondary hover:text-primary transition-colors duration-200 ${
+                    location.pathname === item.path ? "text-primary" : ""
+                  }`}
                   onClick={toggleMenu}
                 >
                   {item.name}
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Link to="/enroll" onClick={toggleMenu}>
+                <Link to="/enroll" onClick={toggleMenu} replace>
                   <Button className="w-full bg-primary hover:bg-primary-hover text-white">
                     Enroll Now
                   </Button>
