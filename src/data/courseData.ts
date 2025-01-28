@@ -178,6 +178,102 @@ export const courses: Course[] = [
         content: "Hands-on projects applying learned concepts"
       }
     ]
+  },
+  {
+    id: "digital-marketing",
+    title: "Digital Marketing",
+    description: "Master digital marketing strategies and tools to effectively reach and engage target audiences.",
+    duration: "3 weeks",
+    level: "Foundational",
+    category: "foundational",
+    schedule: "Tuesdays, Thursdays, and Fridays",
+    image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a",
+    modules: [
+      {
+        title: "Digital Marketing Fundamentals",
+        content: "Introduction to digital marketing channels and strategies"
+      },
+      {
+        title: "Content Strategy",
+        content: "Content creation, SEO basics, social media marketing"
+      },
+      {
+        title: "Analytics & Optimization",
+        content: "Google Analytics, performance tracking, optimization techniques"
+      }
+    ]
+  },
+  {
+    id: "user-interface",
+    title: "User Interface",
+    description: "Learn the fundamentals of UI design and create engaging user interfaces.",
+    duration: "3 weeks",
+    level: "Foundational",
+    category: "foundational",
+    schedule: "Tuesdays, Thursdays, and Fridays",
+    image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12",
+    modules: [
+      {
+        title: "Design Basics",
+        content: "Design principles, color theory, typography fundamentals"
+      },
+      {
+        title: "UI Tools",
+        content: "Introduction to Figma, component design basics"
+      },
+      {
+        title: "Practical Application",
+        content: "Creating user interfaces, style guides, basic prototyping"
+      }
+    ]
+  },
+  {
+    id: "frontend-foundations",
+    title: "Front-end Foundations",
+    description: "Build a strong foundation in front-end web development with HTML and CSS.",
+    duration: "3 weeks",
+    level: "Foundational",
+    category: "foundational",
+    schedule: "Tuesdays, Thursdays, and Fridays",
+    image: "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2",
+    modules: [
+      {
+        title: "HTML Fundamentals",
+        content: "Basic HTML structure, semantic elements, accessibility"
+      },
+      {
+        title: "CSS Basics",
+        content: "Styling, layouts, responsive design principles"
+      },
+      {
+        title: "Project Work",
+        content: "Building responsive web pages using HTML and CSS"
+      }
+    ]
+  },
+  {
+    id: "cybersecurity-foundations",
+    title: "Cybersecurity Foundations",
+    description: "Learn the basics of cybersecurity and understand common security threats.",
+    duration: "3 weeks",
+    level: "Foundational",
+    category: "foundational",
+    schedule: "Tuesdays, Thursdays, and Fridays",
+    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3",
+    modules: [
+      {
+        title: "Security Basics",
+        content: "Introduction to cybersecurity concepts and terminology"
+      },
+      {
+        title: "Common Threats",
+        content: "Understanding basic security threats and prevention"
+      },
+      {
+        title: "Security Best Practices",
+        content: "Basic security measures and protective strategies"
+      }
+    ]
   }
 ];
 
