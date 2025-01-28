@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import Footer from "@/components/Footer";
 
 const courses = [
   {
@@ -96,6 +97,7 @@ const Courses = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

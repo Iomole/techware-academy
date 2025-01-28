@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Trophy, Target } from "lucide-react";
+import Footer from "@/components/Footer";
 
 const About = () => {
   return (
@@ -82,6 +83,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

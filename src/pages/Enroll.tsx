@@ -21,6 +21,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import Footer from "@/components/Footer";
 
 const courses = [
   { id: "data-analytics", label: "Data Analytics" },
@@ -235,6 +236,7 @@ const EnrollPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

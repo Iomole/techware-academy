@@ -8,6 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Footer from "@/components/Footer";
 
 const courseData = {
   "data-analytics": {
@@ -260,6 +261,7 @@ const CourseDetail = () => {
           </Button>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
