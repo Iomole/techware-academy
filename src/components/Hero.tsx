@@ -1,7 +1,10 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="relative bg-techware-gray min-h-screen flex items-center">
       <div className="absolute inset-0 bg-gradient-to-r from-techware-red/10 to-transparent" />
@@ -19,12 +22,14 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 animate-fadeIn">
             <Button
               className="bg-primary hover:bg-primary-hover text-white px-8 py-6 text-lg flex items-center gap-2"
+              onClick={() => navigate('/courses')}
             >
               Explore Courses <ArrowRight size={20} />
             </Button>
             <Button
               variant="outline"
               className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-6 text-lg"
+              onClick={() => navigate('/contact')}
             >
               Contact Us
             </Button>
