@@ -9,10 +9,10 @@ import Navigation from "@/components/Navigation";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <div className="min-h-screen">
         <Navigation />
-        <main className="pt-16"> {/* Add padding to account for fixed navigation */}
+        <main className="pt-16">
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
