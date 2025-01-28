@@ -1,4 +1,3 @@
-import Navigation from "@/components/Navigation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Trophy, Target } from "lucide-react";
 import Footer from "@/components/Footer";
@@ -6,7 +5,6 @@ import Footer from "@/components/Footer";
 const About = () => {
   return (
     <div className="min-h-screen bg-techware-gray">
-      <Navigation />
       <div className="container mx-auto px-4 py-24">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-techware-dark mb-4">
