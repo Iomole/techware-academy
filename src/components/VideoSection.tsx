@@ -1,9 +1,18 @@
 import { Play } from "lucide-react";
 import { Button } from "./ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const VideoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    const video = document.getElementById('promo-video') as HTMLVideoElement;
+    if (video) {
+      video.addEventListener('play', () => setIsPlaying(true));
+      video.addEventListener('pause', () => setIsPlaying(false));
+      video.addEventListener('ended', () => setIsPlaying(false));
+    }
+  }, []);
 
   const handlePlayClick = () => {
     const video = document.getElementById('promo-video') as HTMLVideoElement;
@@ -13,7 +22,6 @@ const VideoSection = () => {
       } else {
         video.play();
       }
-      setIsPlaying(!isPlaying);
     }
   };
 
@@ -32,23 +40,22 @@ const VideoSection = () => {
           <video
             id="promo-video"
             className="w-full h-full object-cover"
-            poster="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
+            controls={false}
+            playsInline
           >
             <source src="/lv_0_20241104084748 (1).mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          {!isPlaying && (
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-              <Button
-                variant="outline"
-                size="lg"
-                className="rounded-full w-16 h-16 p-0 border-2 border-white bg-white/20 hover:bg-white/30 text-white"
-                onClick={handlePlayClick}
-              >
-                <Play className="h-8 w-8" />
-              </Button>
-            </div>
-          )}
+          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <Button
+              variant="outline"
+              size="lg"
+              className="rounded-full w-16 h-16 p-0 border-2 border-white bg-white/20 hover:bg-white/30 text-white"
+              onClick={handlePlayClick}
+            >
+              <Play className="h-8 w-8" />
+            </Button>
+          </div>
         </div>
       </div>
     </div>
