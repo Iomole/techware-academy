@@ -40,9 +40,11 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Button className="bg-primary hover:bg-primary-hover text-white">
-              Enroll Now
-            </Button>
+            <Link to="/enroll">
+              <Button className="bg-primary hover:bg-primary-hover text-white">
+                Enroll Now
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -71,9 +73,11 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button className="w-full bg-primary hover:bg-primary-hover text-white">
-                  Enroll Now
-                </Button>
+                <Link to="/enroll" onClick={toggleMenu}>
+                  <Button className="w-full bg-primary hover:bg-primary-hover text-white">
+                    Enroll Now
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

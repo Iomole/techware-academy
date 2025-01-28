@@ -4,6 +4,7 @@ import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import Courses from "@/pages/Courses";
 import CourseDetail from "@/pages/CourseDetail";
+import Enroll from "@/pages/Enroll";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/courses/:courseId" element={<CourseDetail />} />
+        <Route path="/enroll" element={<Enroll />} />
       </Routes>
     </Router>
   );
