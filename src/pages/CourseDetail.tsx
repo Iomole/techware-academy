@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, Clock, Users, Award, BookOpen, CheckCircle2 } from "lucide-react";
-import { courses, type Course } from "@/data/courseData";
+import { courses } from "@/data/courseData";
 import Footer from "@/components/Footer";
 
 const CourseDetail = () => {
