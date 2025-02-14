@@ -1,4 +1,4 @@
-import Navigation from "@/components/Navigation";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -8,7 +8,6 @@ import Footer from "@/components/Footer";
 const Contact = () => {
   return (
     <div className="min-h-screen bg-techware-gray">
-      <Navigation />
       <div className="container mx-auto px-4 py-24">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -32,7 +31,7 @@ const Contact = () => {
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <MapPin className="mx-auto h-8 w-8 text-primary mb-4" />
               <h3 className="font-semibold mb-2">Location</h3>
-              <p className="text-gray-600">Lagos, Nigeria</p>
+              <p className="text-gray-600">N0 1, Anthony Enahoro Utako Abuja</p>
             </div>
           </div>
 
