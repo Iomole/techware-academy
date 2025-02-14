@@ -1,3 +1,4 @@
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -14,13 +15,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import Footer from "@/components/Footer";
 
 const courses = [
@@ -59,17 +53,33 @@ const EnrollPage = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      // In a real application, you would send this to your backend
-      // For now, we'll simulate sending an email
-      console.log("Form submitted:", values);
+      const formData = {
+        ...values,
+        selectedCourses: values.selectedCourses.map(courseId => 
+          courses.find(c => c.id === courseId)?.label
+        ).join(", "),
+        to: 'twacademy@techware.ng',
+        type: 'Enrollment Form'
+      };
+
+      const response = await fetch('https://formsubmit.co/twacademy@techware.ng', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit enrollment');
+      }
       
-      // Show success message
       toast({
         title: "Enrollment Submitted!",
         description: "We'll contact you shortly with next steps.",
       });
       
-      // Reset form
       form.reset();
     } catch (error) {
       toast({
