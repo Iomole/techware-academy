@@ -1,9 +1,7 @@
-
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-import { useToast } from "@/components/ui/use-toast";
-import Navigation from "@/components/Navigation";
+import { useToast } from "@/hooks/use-toast";
 import {
   Form,
   FormControl,
@@ -53,22 +51,22 @@ const EnrollPage = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      const formData = {
-        ...values,
-        selectedCourses: values.selectedCourses.map(courseId => 
-          courses.find(c => c.id === courseId)?.label
-        ).join(", "),
-        to: 'twacademy@techware.ng',
-        type: 'Enrollment Form'
-      };
+      const formData = new FormData();
+      
+      // Add all form fields to FormData
+      Object.entries(values).forEach(([key, value]) => {
+        if (key === 'selectedCourses') {
+          formData.append(key, values.selectedCourses.map(courseId => 
+            courses.find(c => c.id === courseId)?.label
+          ).join(", "));
+        } else {
+          formData.append(key, String(value));
+        }
+      });
 
-      const response = await fetch('https://formsubmit.co/twacademy@techware.ng', {
+      const response = await fetch('https://formsubmit.co/ajax/twacademy@techware.ng', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(formData)
+        body: formData,
       });
 
       if (!response.ok) {
@@ -92,7 +90,6 @@ const EnrollPage = () => {
 
   return (
     <div className="min-h-screen bg-techware-gray">
-      <Navigation />
       <div className="container mx-auto px-4 py-24">
         <div className="max-w-2xl mx-auto">
           <div className="bg-white rounded-lg shadow-md p-8">
