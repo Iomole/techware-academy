@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -5,7 +6,6 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import Footer from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
-import Navigation from "@/components/Navigation";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -45,7 +45,6 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-techware-gray">
-      <Navigation />
       <div className="container mx-auto px-4 py-24">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
