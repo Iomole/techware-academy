@@ -15,14 +15,14 @@ const testimonials = [
     role: "Data Analyst Facilitator",
     content: "Empowering learners with practical data analytics skills and real-world insights to excel in their careers.",
     rating: 5,
-    image: victorImage
+    image: umarImage
   },
   {
     name: "Umar Farouk",
     role: "Full-stack Web Development/Devops Facilitator",
     content: "Guiding aspiring developers through modern web technologies and DevOps practices for successful tech careers.",
     rating: 5,
-    image: umarImage
+    image: victorImage
   }
 ];
 
