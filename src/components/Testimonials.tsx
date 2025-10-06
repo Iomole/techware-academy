@@ -6,28 +6,23 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import victorImage from "@/assets/victor-okeke.png";
+import umarImage from "@/assets/umar-farouk.png";
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "Data Analyst at Tech Corp",
-    content: "The Data Analytics course completely transformed my career. The practical approach and expert mentorship were invaluable.",
+    name: "Victor Okeke",
+    role: "Data Analyst Facilitator",
+    content: "Empowering learners with practical data analytics skills and real-world insights to excel in their careers.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+    image: victorImage
   },
   {
-    name: "Michael Chen",
-    role: "Full Stack Developer",
-    content: "Thanks to Techware Academy, I transitioned from a non-tech background to a successful developer role in just 6 months.",
+    name: "Umar Farouk",
+    role: "Full-stack Web Development/Devops Facilitator",
+    content: "Guiding aspiring developers through modern web technologies and DevOps practices for successful tech careers.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
-  },
-  {
-    name: "Lisa Rodriguez",
-    role: "Digital Marketing Specialist",
-    content: "The digital marketing program provided real-world experience and helped me land my dream job.",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
+    image: umarImage
   }
 ];
 
@@ -37,10 +32,10 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fadeIn">
           <h2 className="text-3xl font-bold text-techware-dark mb-4">
-            Student Success Stories
+            Success Stories
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Hear from our graduates who have transformed their careers through Techware Academy
+            Meet our dedicated facilitators who are transforming careers through Techware Academy
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
