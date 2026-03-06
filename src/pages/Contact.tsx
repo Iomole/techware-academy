@@ -18,7 +18,7 @@ const Contact = () => {
     const formData = new FormData(e.currentTarget);
     
     try {
-      const response = await fetch('https://formsubmit.co/ajax/twacademy@techware.ng', {
+      const response = await fetch('https://formsubmit.co/ajax/academy@techware.ng', {
         method: 'POST',
         body: formData,
       });
