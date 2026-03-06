@@ -64,7 +64,7 @@ const EnrollPage = () => {
         }
       });
 
-      const response = await fetch('https://formsubmit.co/ajax/twacademy@techware.ng', {
+      const response = await fetch('https://formsubmit.co/ajax/academy@techware.ng', {
         method: 'POST',
         body: formData,
       });
